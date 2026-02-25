@@ -24,23 +24,16 @@
       <p>Toca la pantalla para escuchar la música xd</p>
     </div>
   </body>
-  <script>
-    const audio = new Audio("AOM.mp3");
-    audio.loop = true;
+ <script>
+  const audio = document.getElementById("music");
 
-    document.addEventListener(
-      "mousemove",
-      () => {
-        audio.play();
-      },
-      { once: true },
-    );
-    document.addEventListener(
-      "touchstart",
-      () => {
-        audio.play();
-      },
-      { once: true },
-    );
-  </script>
+  function playAudio() {
+    audio.play().catch(error => {
+      console.log("El navegador bloqueó el audio:", error);
+    });
+  }
+
+  document.addEventListener("click", playAudio, { once: true });
+  document.addEventListener("touchstart", playAudio, { once: true });
+</script>
 </html>
