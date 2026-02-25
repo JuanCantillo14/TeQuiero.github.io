@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeQuierOoOoooOo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="music" loop>
+      <source src="AOM.mp3" type="audio/mp3" />
+    </audio>
+    <video loop autoplay muted playsinline class="bg-video">
+      <source src="AOM.mp4" type="video/mp4" />
+    </video>
+    <div>
+      <h1 class="wave">
+        <span>T</span><span>e</span>&nbsp;<span></span><span>Q</span
+        ><span>u</span><span>i</span><span>e</span><span>r</span><span>O</span
+        ><span>o</span><span>O</span><span>o</span><span>o</span><span>O</span
+        ><span>o</span>
+      </h1>
+      <h3>Me haces el hombre más feliz ❤️</h3>
+      <p>Toca la pantalla para escuchar la música xd</p>
+    </div>
+  </body>
+  <script>
+    const audio = new Audio("AOM.mp3");
+    audio.loop = true;
+
+    document.addEventListener(
+      "mousemove",
+      () => {
+        audio.play();
+      },
+      { once: true },
+    );
+    document.addEventListener(
+      "touchstart",
+      () => {
+        audio.play();
+      },
+      { once: true },
+    );
+  </script>
+</html>
